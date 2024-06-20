@@ -44,7 +44,7 @@ class Rect():
         self.rect_id = canvas.create_polygon(x1, y1, x2, y2, x3, y3, x4, y4, fill=fill_color)
     
     def update_pos(self, y_speed, fill_color="white"):
-        self.canvas.delete(self.circle_id)
+        self.canvas.delete(self.rect_id)
         self.y1 += y_speed
         self.y2 += y_speed
         self.y3 += y_speed
