@@ -1,10 +1,11 @@
 from tkinter import Tk, BOTH, Canvas
 
 class Window():
-    def __init__(self, width=800, height=600, close_func=None):
+    def __init__(self, width=800, height=600, close_func=None, input_func=None):
         self.__root = Tk()
         self.__root.title("Pong")
         self.__root.protocol("WM_DELETE_WINDOW", close_func)
+        self.__root.bind("<Key>", input_func)
         self.canvas = Canvas(self.__root, bd=5, bg="black", height=height, relief="flat", width=width)
         self.canvas.pack(fill=BOTH, expand=1)
         self.active = False
