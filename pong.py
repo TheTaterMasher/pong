@@ -43,15 +43,6 @@ class Pong():
             # check if the ball intersects right rect
             if self.right_rect.x1 < self.ball.x2 < self.right_rect.x2 and self.ball.y2 > self.right_rect.y1 and self.ball.y1 < self.right_rect.y4:
                 self.circle_x_speed = -self.circle_x_speed
-
-            # move the rects / change to get user input to move the rects
-            
-            if self.right_rect.y4 > self.height:
-                self.right_rect_speed = -5
-            elif self.right_rect.y1 < 0:
-                self.right_rect_speed = 5
-            
-            #self.right_rect.update_pos(right_rect_speed)
             
             # redraw and sleep to get 60fps
             self.win.redraw()
